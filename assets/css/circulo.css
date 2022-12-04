@@ -1,0 +1,218 @@
+/* El root me permite establecer una variable para los colores hexadecimales */
+:root {
+    --color-uno:#080101;            /* Header and footer */
+    --color-dos:#380101;           /* Bordes y resaltado sutil */
+    --color-tres:#a70202;         /* Brillo e iluminaciónS */
+    --color-cuatro:#dba5a5 ;           /* Detalles */
+    --grispalido:#D9D9D9;           /* Fondo de las páginas */
+    --grisoscuro:#828282;           /* Fondo de las páginas */
+    --blanco:#FFFFFF;               /* C olor letra 1 */
+    --negro:#000000;                /* Color letra 2 */
+    --baravance1:#8a1212;                /* Color letra 2 */
+    --baravance2:#8a1212;                /* Color letra 2 */
+    --baravance3:#8a1212;                /* Color letra 2 */
+    /* Para mandar a llamar a el color, se coloca: var(--colorasignado) */
+}
+
+/* Page reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+
+body {
+    background-color: var(--grispalido);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* PORTADA */
+.container-cover {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: 30px;
+    background-image: url(../img/index4.jpg);
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-info-cover {
+    max-width: 1000px;
+    height: 270px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-info-cover h1{
+    color: var(--blanco);
+    font-size: 40px;
+    font-weight: 500px;    
+    margin-bottom: 20px;
+}
+
+.container-info-cover p{
+    color: var(--grispalido);
+    font-size: 20px;
+    font-weight: 500px;
+}
+
+
+
+
+/* BARRAS DE PROGRESO ----------------------------------------------------------------------------- */
+.porcentaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-repeat: no-repeat;
+    background-color: var(--grispalido);
+}
+
+.container {
+    position: relative;
+    width: 960px;
+    height: 250px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .card {
+    position: relative;
+    width: 250px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.container .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50;
+    width: 100%;
+    height:100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.porcent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.porcent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.porcent .number h2 {
+    color: var(--color-uno);
+    font-weight: 700;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.card:hover .porcent .number h2 {
+    color: var(--color-uno);;
+    font-size: 35px;
+}
+
+.text {
+    position: relative;
+    color: var(--color-uno);;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-85deg)!important;
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--grisoscuro);
+    stroke-width: 10;
+    stroke-linecap: round !important;
+    transform: translate(5px, 5px);
+}
+
+/*Claculo para simular el porcent*/
+svg circle:nth-child(2){
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+
+.card:nth-child(1) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 47)/100);
+    stroke: var(--baravance1);
+}
+.card:nth-child(2) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 32)/100);
+    stroke: var(--baravance2);
+}
+.card:nth-child(3) svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 21)/100);
+    stroke: var(--baravance3);
+}
+
+@media only screen and (max-width:600px) {
+    .porcentaje{
+        height: auto;
+        margin-left: 30px;
+        flex-flow: row wrap;
+    }
+} 
+
+@media screen and(max-width: 1068px) {
+    .container{
+        max-width: 80rem;
+        min-width: 70rem;
+    }
+    
+}
+
+@media screen and (max-width: 868px) {
+    .container{
+        max-width: 80rem;
+    }
+}

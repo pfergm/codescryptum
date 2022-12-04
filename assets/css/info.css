@@ -1,0 +1,61 @@
+@import url(inicio.css);
+
+.rec {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 1150px;
+    height: 400px;
+    background: var(--color-cuatro);
+}
+
+.rec h1{
+    color: var(--color-dos);
+    font-size: 30px;
+    font-weight: 50px;    
+    padding: 30px 30px 30px 30px;
+    text-align: left;
+}
+
+.rec1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 80px;
+    margin-right: 100px;
+    width: 1050px;
+    height: 50px;
+    background: var(--color-dos);
+}
+
+.rec h1{
+    color: var(--color-dos);
+    font-size: 30px;
+    font-weight: 50px;    
+    padding: 30px 30px 30px 30px;
+    text-align: left;
+}
+
+/* Cajas */
+#cajas{
+    margin-top:20px;
+  }
+  
+  #cajas .caja{
+    float:center;
+    text-align: center;
+    padding:20px;
+  }
+  
+  #cajas .caja img{
+    width:90px;
+  }
+  
+  .caja h1 {
+    font-size: 30px;
+    color: var(--color-tres);
+  }
+
+  .caja p {
+    font-size: 20px;
+  }

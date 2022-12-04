@@ -1,0 +1,157 @@
+/* El root me permite establecer una variable para los colores hexadecimales */
+:root {
+    --color-uno:#080101;            /* Header and footer */
+    --color-dos:#380101;           /* Bordes y resaltado sutil */
+    --color-tres:#a70202;         /* Brillo e iluminaciónS */
+    --color-cuatro:#dba5a5 ;           /* Detalles */
+    --grispalido:#D9D9D9;           /* Fondo de las páginas */
+    --blanco:#FFFFFF;               /* Color letra 1 */
+    --negro:#000000;                /* Color letra 2 */
+    /* Para mandar a llamar a el color, se coloca: var(--colorasignado) */
+}
+
+/* Page reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-emphasis-color: var(--grispalido);
+} 
+
+/* Page background (main image) */
+
+body {
+  background-color: var(--grispalido);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative; /* Define background */
+}
+
+.caja__trasera {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    backdrop-filter: blur(10px);
+    background-color: var(--color-cuatro); /* Fondo de la caja trasera */
+    border: 1px solid var(--color-tres); /* Borde de la caja trasera */
+}
+
+.caja__trasera div {
+    margin: 100px 10px;
+    color: var(--color-uno); /* Color de la letra de la caja trasera */
+}
+
+.caja__trasera div p {
+    margin-top: 30px;
+    margin-left: 400px;
+}
+
+.caja__trasera div h3 {
+    font-weight: 400px;
+    font-size: 25px;
+    margin-left: 400px;
+}
+
+
+
+/* Formmato para el login y register en los formularios */
+
+.contenedor__login-register {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -172px;
+    left: 10px;
+}
+
+.contenedor__login-register form {
+    width: 100%;
+    padding: 20px 20px;
+    background: var(--color-uno);
+    position: absolute;
+    border: 1px solid var(--color-tres); /* Color del borde del formulario */
+    align-items: center;
+    transition: left 200ms cubic-bezier(0.5,0.5,1.5); 
+}
+
+.contenedor__login-register form h2{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px; 
+    color: var(--color-tres);   
+}
+
+.contenedor__login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;  
+    border: none;
+    background: var(--grispalido);
+    font-size: 15px;
+    outline: none;
+}
+
+.contenedor__login-register form button{
+    padding: 10px 40px;
+    margin-top: 1rem;  
+    margin-left: 6.5rem;
+    border: 1px solid var(--color-tres);
+    font-size: 15px;
+    background: var(--color-uno);
+    color: var(--grispalido); /* Color de la letra del botón de registro */
+    cursor: pointer;
+    outline: none;
+}
+
+.formulario__login {
+    opacity: 1;
+    display: block;
+}
+
+.formulario__register {
+    display: none;
+}
+
+/* Hacer a la página responsiva ------------------------------*/
+@media screen and (max-width: 850px) {
+    main {
+        margin-top: 50px;
+    }
+    .caja__trasera {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .caja__trasera div {
+        margin: 0px;
+        position: absolute;
+    }
+    .contenedor__login-register {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+    .contenedor__login-register form {
+        position: relative;
+    }
+}

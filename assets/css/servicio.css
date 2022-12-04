@@ -1,0 +1,146 @@
+/* El root me permite establecer una variable para los colores hexadecimales */
+:root {
+    --color-uno:#080101;            /* Header and footer */
+    --color-dos:#380101;           /* Bordes y resaltado sutil */
+    --color-tres:#a70202;         /* Brillo e iluminaciónS */
+    --color-cuatro:#dba5a5 ;           /* Detalles */
+    --grispalido:#D9D9D9;           /* Fondo de las páginas */
+    --blanco:#FFFFFF;               /* Color letra 1 */
+    --negro:#000000;                /* Color letra 2 */
+    /* Para mandar a llamar a el color, se coloca: var(--colorasignado) */
+}
+
+.contenedor__todo {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative; /* Define background */
+    margin-top: 100px;
+} 
+
+.caja__trasera {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    backdrop-filter: blur(10px);
+    background-color: #012938; /* Color de la caja trasera */
+    border: 1px solid var(--color-tres); /* Fondo de la caja trasera */
+}
+
+.caja__trasera div {
+    margin: 100px 40px;
+    color: var(--grispalido); /* Color de la letra de la caja trasera */
+    transition: all 500ms;
+}
+
+.caja__trasera div p,
+.caja__trasera div button {
+    margin-top: 30px;
+}
+
+.caja__trasera div h3 {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.caja__trasera button {
+    padding: 10px 40px;
+    border: 1px solid var(--color-tres); /* Color borde del botón */
+    background: transparent; /* Color fondo botón antes del cursor */
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--grispalido); /* Color del botón a la hora cuando se poner el cursor */
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover {
+    background: var(--primario); /* Fondo del botón */
+    color: var(--color-tres); /* Color letra del botón */
+}
+
+/* Formmato para el login y register en los formularios */
+
+.contenedor__login-register {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -180px;
+    left: 10px;
+}
+
+.contenedor__login-register form {
+    width: 100%;
+    padding: 20px 20px;
+    background: var(--color-uno);
+    position: absolute;
+    border: 1px solid var(--color-tres); /* Color del borde del formulario */
+    /* border-radius: 20px; */
+    align-items: center;
+    transition: left 200ms cubic-bezier(0.5,0.5,1.5); 
+}
+
+.contenedor__login-register form h2{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px; 
+    color: var(--color-tres);   
+}
+
+.contenedor__login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;  
+    border: none;
+    background: var(--grispalido);
+    font-size: 15px;
+    outline: none;
+}
+
+.contenedor__login-register form button{
+    padding: 10px 40px;
+    margin-top: 40px;  
+    border: 1px solid var(--color-tres);
+    font-size: 15px;
+    background: transparent;
+    color: var(--grispalido); /* Color de la letra del botón de registro */
+    cursor: pointer;
+    outline: none;
+}
+
+.formulario__login {
+    opacity: 1;
+    display: block;
+}
+
+.formulario__register {
+    display: none;
+}
+
+/* Hacer a la página responsiva ------------------------------*/
+@media screen and (max-width: 850px) {
+    main {
+        margin-top: 50px;
+    }
+    .caja__trasera {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .caja__trasera div {
+        margin: 0px;
+        position: absolute;
+    }
+    .contenedor__login-register {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+    .contenedor__login-register form {
+        position: relative;
+    }
+}
