@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIENDA | CODESCRYPTUM</title>
+    <link rel="stylesheet" href="assets/css/tienda.css">
+    <link rel="stylesheet" href="assets/css/inicio.css">
+</head>
+
+<body>
+
+    <!-- AQUÍ ESTÁ EL HEADER -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>CODESCRYPTUM</h1>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="inicio.html">INICIO</a></li>
+                        <li class="menu-selected"> <a href="tienda.html" class="text-menu-selected">TIENDA</a></li>
+                        <li><a href="contacto.html">CONTÁCTANOS</a></li>
+                        <li><a href="info.html">SOBRE NOSOTROS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>        
+    </header>
+
+    <br><br><br><br><br>
+
+    <!-- CAJAS DE FILTRADO PARA EL CATÁLOGO DE PRODUCTOS -------------------------->
+
+    <div class="container-post">
+
+        <input type="radio" id="Todo" name="categories" value="Todo" checked>
+        <input type="radio" id="Excel" name="categories" value="Excel">
+        <input type="radio" id="C#" name="categories" value="C#">
+        <input type="radio" id="JavaScript" name="categories" value="JavaScript">
+        <input type="radio" id="Principiante" name="categories" value="Principiante">
+        <input type="radio" id="Avanzado" name="categories" value="Avanzado">
+
+        <!-- DIVS DE FILTRADO: CATEGORIAS -------------------------->
+        <div class="container-category">
+            <label for="Todo">Todo</label>
+            <label for="Excel">Excel</label>
+            <label for="C#">C#</label>
+            <label for="JavaScript">JavaScript</label>
+            <label for="Principiante">Principiante</label>
+            <label for="Avanzado">Avanzado</label>
+        </div>
+
+        <!-- AQUÍ COMIENZA EL CATÁLOGO DE PRODUCTOS -------------------------->
+        <div class="posts">
+
+            <div class="post" data-category="Excel Principiante"> <!--------------------->
+                <div class="ctn-img">
+                    <img src="assets/img/excel.jpg">
+                </div>
+                <h2>Excel Principiante</h2>
+                <span><b>$1000.00 MX</b><a>$950.00 MX</a></span>
+                <ul class="ctn-tag">
+                    <li>Excel</li> <!-- Tipo -->
+                    <li>Principiante</li>   <!-- Clasificacion -->
+                </ul>
+                <a href="#"><button>Consultar más</button></a>
+            </div>
+
+            <div class="post" data-category="Excel Avanzado"> <!--------------------->
+                <div class="ctn-img">
+                    <img src="assets/img/excel.jpg">
+                </div>
+                <h2>Excel Avanzado</h2>
+                <span><b>$1000.00 MX</b><a>$950.00 MX</a></span>
+                <ul class="ctn-tag">
+                    <li>Excel</li> <!-- Tipo -->
+                    <li>Avanzado</li>   <!-- Clasificacion -->
+                </ul>
+                <a href="#"><button>Consultar más</button></a>
+            </div>   
+            
+            <div class="post" data-category="C# Principiante"> <!--------------------->
+                <div class="ctn-img">
+                    <img src="assets/img/cc.jpg">
+                </div>
+                <h2>C# Principiante</h2>
+                <span><b>$1000.00 MX</b><a>$950.00 MX</a></span>
+                <ul class="ctn-tag">
+                    <li>C#</li> <!-- Tipo -->
+                    <li>Principiante</li>   <!-- Clasificacion -->
+                </ul>
+                <a href="#"><button>Consultar más</button></a>
+            </div>
+
+            <div class="post" data-category="C# Avanzado"> <!--------------------->
+                <div class="ctn-img">
+                    <img src="assets/img/cc.jpg">
+                </div>
+                <h2>C# Avanzado</h2>
+                <span><b>$1000.00 MX</b><a>$950.00 MX</a></span>
+                <ul class="ctn-tag">
+                    <li>C#</li> <!-- Tipo -->
+                    <li>Avanzado</li>   <!-- Clasificacion -->
+                </ul>
+                <a href="#"><button>Consultar más</button></a>
+            </div>  
+            
+            <div class="post" data-category="JavaScript Principiante"> <!--------------------->
+                <div class="ctn-img">
+                    <img src="assets/img/js.jpg">
+                </div>
+                <h2>JavaScript Principiante</h2>
+                <span><b>$1000.00 MX</b><a>$950.00 MX</a></span>
+                <ul class="ctn-tag">
+                    <li>JavaScript</li> <!-- Tipo -->
+                    <li>Principiante</li>   <!-- Clasificacion -->
+                </ul>
+                <a href="#"><button>Consultar más</button></a>
+            </div>
+
+            <div class="post" data-category="JavaScript Avanzado"> <!--------------------->
+                <div class="ctn-img">
+                    <img src="assets/img/js.jpg">
+                </div>
+                <h2>JavaScript Avanzado</h2>
+                <span><b>$1000.00 MX</b><a>$950.00 MX</a></span>
+                <ul class="ctn-tag">
+                    <li>JavaScript</li> <!-- Tipo -->
+                    <li>Avanzado</li>   <!-- Clasificacion -->
+                </ul>
+                <a href="#"><button>Consultar más</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- AQUÍ VA EL PIE DE PAGINA -->
+    <div class="container-footer"">
+        <footer>
+            <h5> Contáctanos | codescryptum@gmail.com </h5>
+            <h4>2022 CODESCRYPTUM | TODOS LOS DERECHOS RESERVADOS</h4>
+        </footer>
+    </div>
+    
+</body>
+</Excel>
